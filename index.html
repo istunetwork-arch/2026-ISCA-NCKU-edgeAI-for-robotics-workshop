@@ -154,9 +154,10 @@ hr.rule {
 
 .hero-left {
   position:relative; z-index:2;
-  padding:100px 0 80px var(--gutter);
+  padding:72px 0 60px var(--gutter);
   display:flex; flex-direction:column; justify-content:center;
-  max-width:620px;
+  max-width:680px;
+  margin-left:max(var(--gutter), calc((100% - 1080px) / 2));
 }
 
 .hero-kicker {
@@ -179,7 +180,7 @@ hr.rule {
 .hero-title .zh-line {
   display:block;
   font-family:'Noto Serif TC', serif; font-weight:900;
-  font-size:clamp(3rem, 6vw, 5.2rem);
+  font-size:clamp(2.6rem, 4.8vw, 4.4rem);
   line-height:1.08; letter-spacing:-.01em;
   color:var(--white);
 }
@@ -193,16 +194,15 @@ hr.rule {
 
 /* Meta: three items in a row, separated by thin verticals */
 .hero-meta {
-  display:flex; flex-wrap:wrap;
+  display:grid; grid-template-columns:repeat(3,1fr);
   border-top:1px solid rgba(255,255,255,.1);
   margin-bottom:44px;
 }
 .hm-item {
-  padding:18px 28px 18px 0;
-  margin-right:28px;
+  padding:16px 20px 16px 0;
   border-right:1px solid rgba(255,255,255,.08);
 }
-.hm-item:last-child { border-right:none; margin-right:0; }
+.hm-item:last-child { border-right:none; }
 .hm-label {
   font-family:'DM Mono', monospace; font-size:8.5px;
   color:rgba(255,255,255,.3); letter-spacing:.2em; margin-bottom:5px;
@@ -226,10 +226,10 @@ hr.rule {
   position:relative; z-index:2;
   display:flex; align-items:flex-end;
   /* Allow it to overflow the right edge */
-  margin-right:100px;
+  margin-right:20px;
 }
 .arm-img {
-  height:120vh;
+  height:108vh;
   width:auto;
   display:block;
   filter:
@@ -497,6 +497,7 @@ footer {
 ──────────────────────────────────────── */
 @media (max-width: 1100px) {
   :root { --gutter: 28px; }
+  .hero-left { max-width:none !important; }
   #hero { grid-template-columns:1fr; min-height:100vh; position:relative; }
   .hero-right { position:absolute; bottom:0; right:-40px; height:100%; display:flex; align-items:flex-end; pointer-events:none; opacity:0.25; margin-right:0; }
   .arm-img { height:70vh; width:auto; }
@@ -513,7 +514,7 @@ footer {
 @media (max-width: 768px) {
   .logo-grid { display:flex; flex-direction:column; align-items:center; gap:28px; }
   .logo-slot { width:100%; display:flex; justify-content:center; }
-  .logo-slot img { height:72px; width:auto; max-width:80%; object-fit:contain; }
+  .logo-slot img { width:160px !important; height:auto !important; object-fit:contain; }
   .ch-grid { grid-template-columns:1fr; }
 
   /* 小字體放大 20% */
@@ -651,7 +652,7 @@ footer {
         </div>
         <div class="pr">
           <div class="pr-t">13:00 – 13:05</div>
-          <div class="pr-c"><h4>開場致詞</h4></div>
+          <div class="pr-c"><h4>開幕致詞</h4></div>
         </div>
         <div class="pr">
           <div class="pr-t">13:05 – 13:30</div>
