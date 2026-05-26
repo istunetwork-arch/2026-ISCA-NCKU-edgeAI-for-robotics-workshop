@@ -482,9 +482,10 @@ footer {
 ──────────────────────────────────────── */
 @media (max-width: 900px) {
   :root { --gutter: 28px; }
-  #hero { grid-template-columns:1fr; }
-  .hero-right { display:none; }
-  .hero-left { padding:80px var(--gutter) 64px; max-width:none; }
+  #hero { grid-template-columns:1fr; min-height:100vh; position:relative; }
+  .hero-right { position:absolute; bottom:0; right:-40px; height:100%; display:flex; align-items:flex-end; pointer-events:none; opacity:0.25; margin-right:0; }
+  .arm-img { height:70vh; width:auto; }
+  .hero-left { padding:80px var(--gutter) 80px; max-width:none; position:relative; z-index:2; }
   .curric-top, .ctx-body { grid-template-columns:1fr; gap:36px; }
   .ch-grid { grid-template-columns:1fr 1fr; }
   .agenda-layout { grid-template-columns:1fr; gap:48px; }
